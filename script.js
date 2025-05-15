@@ -1,13 +1,10 @@
-// Lista de tarefas
 let tarefas = [];
 
-// Função anônima para adicionar tarefas
 const adicionarTarefa = function(tarefa) {
   tarefas.push({ descricao: tarefa, concluida: false });
   console.log(`Tarefa adicionada: "${tarefa}"`);
 };
 
-// Arrow function para listar tarefas
 const listarTarefas = () => {
   console.log("\nLista de Tarefas:");
   tarefas.forEach((tarefa, index) => {
@@ -16,12 +13,10 @@ const listarTarefas = () => {
   });
 };
 
-// Função que executa uma operação com callback
 function gerenciarTarefa(callback) {
   callback();
 }
 
-// Callbacks possíveis
 
 const removerTarefa = () => {
   const index = parseInt(prompt("Digite o índice da tarefa a ser removida:"));
@@ -54,7 +49,7 @@ const concluirTarefa = () => {
   }
 };
 
-// Menu interativo
+
 function menu() {
   let opcao;
   do {
@@ -96,5 +91,5 @@ function menu() {
   } while (opcao !== "6");
 }
 
-// Iniciar o menu
+
 menu();
